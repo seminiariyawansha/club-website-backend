@@ -21,3 +21,8 @@ jobs:
 
       - name: Run tests
         run: npx jest
+
+      - name: Attempt to print secret (should be masked)
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
+        run: echo "DB_URL is $DB_URL"

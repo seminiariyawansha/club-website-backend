@@ -3,7 +3,7 @@ const app = require('./app');
 
 test('GET /api/health should return 200', async () => {
   const res = await request(app).get('/api/health');
-  expect(res.statusCode).toBe(200);
+  expect(res.statusCode).toBe(999);
 });
 
 test('GET /api/clubs should return 200 and an array', async () => {
